@@ -1,32 +1,53 @@
+/* Universal Selector */
+/* Removes default margin and padding and makes sizing easier */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/* Element selector */
+/* Body Styling */
+/* Sets the font, background, text color and line spacing */
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #eef2f3, #dfe9f3);
     color: #333;
     line-height: 1.6;
 }
-/* Element selector */
+
+/* Header Styling */
 header {
     background: linear-gradient(135deg, #243447, #34526f);
     color: white;
     text-align: center;
     padding: 45px 35px;
 }
-/* NAVBAR */
-.navbar {
-    background: white;
-    display: flex;
-    justify-content: center;
-    gap: 35px;
-    padding: 18px;
-    border-bottom: 1px solid #ddd2c8;
+
+/* Main Heading inside Header */
+header h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
 }
 
+/* Subtitle inside Header */
+header strong {
+    font-size: 18px;
+    color: #d9e2ec;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    padding: 18px;
+    margin-top: 25px;
+    border-radius: 8px;
+    border: 1px solid #ddd2c8;
+}
+
+/* Navigation Links */
 .navbar a {
     color: #5c4030;
     text-decoration: none;
@@ -34,26 +55,20 @@ header {
     font-size: 15px;
 }
 
+/* Navigation Link Hover Effect */
 .navbar a:hover {
     color: #a36f48;
+    text-decoration: underline;
 }
-/* Element selector */
-header h1 {
-    font-size: 36px;
-    margin-bottom: 8px;
-}
-/* Element selector */
-header strong {
-    font-size: 18px;
-    color: #d9e2ec;
-}
-/* Element selector */
+
+/* Main Content Area */
 main {
     width: 85%;
     max-width: 1000px;
     margin: 30px auto;
 }
-/* Class selector */
+
+/* Resume Section Styling */
 .resume-section {
     background-color: white;
     padding: 25px;
@@ -62,11 +77,8 @@ main {
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
-/* ID selector */
-#profile {
-    text-align: center;
-}
-/* Element selector */
+
+/* Section Headings */
 h2 {
     color: #243447;
     text-align: left;
@@ -75,18 +87,21 @@ h2 {
     border-bottom: 2px solid #34526f;
     padding-bottom: 8px;
 }
-/* Element selector */
+
+/* Subheadings */
 h3 {
     color: #34526f;
     font-size: 20px;
     margin-bottom: 8px;
 }
-/* Element selector */
+
+/* Paragraph Styling */
 p {
     font-size: 16px;
     margin-bottom: 10px;
 }
-/* Element selector */
+
+/* Profile Image Styling */
 img {
     width: 150px;
     height: 150px;
@@ -96,31 +111,31 @@ img {
     display: block;
     margin: 15px auto;
 }
-/* Element selector */
+
+/* Table Styling */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
 }
-/* Element selector */
+
+/* Table Header and Data Cells */
 th,
 td {
     border: 1px solid #c8d0d8;
     padding: 12px;
     text-align: left;
 }
-/* Element selector */
+/* Table Heading */
 th {
     background-color: #243447;
     color: white;
 }
-
-/* Element selector */
+/* Alternate Table Row Background */
 tr:nth-child(even) {
     background-color: #f4f6f8;
 }
-
-/* Class selector */
+/* Project Card Styling */
 .project-card {
     background-color: #f8fafc;
     border-left: 4px solid #34526f;
@@ -128,71 +143,109 @@ tr:nth-child(even) {
     margin-bottom: 15px;
     border-radius: 8px;
 }
-/* ID selector */
-#skills {
-    background-color: #f8fafc;
-}
-/* Class selector */
+/* Skills List Styling */
 .skill-list {
     padding-left: 25px;
 }
-/* Element selector */
+
+/* List Item Styling */
 li {
     margin-bottom: 8px;
 }
 
-/* ID selector */
-#contact {
-    border-top: 4px solid #34526f;
-}
-/* Element selector */
+/* General Link Styling */
 a {
     color: #245b8a;
     text-decoration: none;
     font-weight: bold;
 }
-/* Pseudo-class selector */
+/* General Link Hover Effect */
 a:hover {
     text-decoration: underline;
 }
-/* Element selector */
+
+/* Contact Button Styling */
+.contact-btn {
+    display: inline-block;
+    background-color: #34526f;
+    color: white;
+    padding: 12px 25px;
+    margin-bottom: 20px;
+    border: 2px solid #34526f;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Contact Button Hover Effect */
+.contact-btn:hover {
+    background-color: white;
+    color: #34526f;
+    border-color: #34526f;
+    text-decoration: none;
+}
+/* Footer Styling */
 footer {
     background-color: #243447;
     color: white;
     text-align: center;
     padding: 20px;
 }
-/* Element selector */
+/* Footer Paragraph */
 footer p {
     margin: 0;
 }
-/* Element selector */
-hr {
-    display: none;
-}
-/* Responsive design */
-@media (max-width: 600px) {
 
-    main {
-        width: 92%;
+/* Responsive Design */
+/* These styles apply when the screen width is 600px or smaller */
+@media (max-width: 600px) {
+    /* Smaller Header Padding */
+    header {
+        padding: 30px 15px;
     }
+    /* Smaller Header Heading */
     header h1 {
         font-size: 28px;
     }
+    /* Smaller Header Subtitle */
     header strong {
         font-size: 16px;
     }
+    /* Mobile Navigation */
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px;
+    }
+    /* Main Content Width on Mobile */
+    main {
+        width: 92%;
+    }
+    /* Smaller Section Padding */
     .resume-section {
         padding: 18px;
     }
+    /* Smaller Section Heading */
     h2 {
         font-size: 22px;
     }
+    /* Smaller Subheading */
+    h3 {
+        font-size: 18px;
+    }
+    /* Smaller Table Text */
     table {
         font-size: 14px;
     }
+    /* Smaller Table Cell Padding */
     th,
     td {
         padding: 8px;
+    }
+    /* Smaller Profile Image */
+    img {
+        width: 130px;
+        height: 130px;
     }
 }
